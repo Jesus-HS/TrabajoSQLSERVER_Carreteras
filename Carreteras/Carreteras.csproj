@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47C802D3-B4EE-44A0-BC75-17D42A2869D0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Carreteras</RootNamespace>
+    <AssemblyName>Carreteras</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.WebDesign.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.11.0.3366.16\lib\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="InformeCarretera\Carretera.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Carretera.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InformeCarretera\carretera_RV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeCarretera\carretera_RV.Designer.cs">
+      <DependentUpon>carretera_RV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeCategoria\Categoria.cs">
+      <DependentUpon>Categoria.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InformeCategoria\Categoria.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Categoria.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Formas del Menu\carretera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas del Menu\carretera.Designer.cs">
+      <DependentUpon>carretera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas del Menu\comuna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas del Menu\comuna.Designer.cs">
+      <DependentUpon>comuna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas del Menu\categoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas del Menu\categoria.Designer.cs">
+      <DependentUpon>categoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas Principales\Consultas.cs" />
+    <Compile Include="Formas Principales\Presentacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas Principales\Presentacion.Designer.cs">
+      <DependentUpon>Presentacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas Principales\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas Principales\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas Principales\mensaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas Principales\mensaje.Designer.cs">
+      <DependentUpon>mensaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formas Principales\notificacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas Principales\notificacion.Designer.cs">
+      <DependentUpon>notificacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeComuna\Comuna.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Comuna.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InformeComuna\Comuna_RV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeComuna\Comuna_RV.Designer.cs">
+      <DependentUpon>Comuna_RV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeTramo\Tramo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tramo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InformeTramo\Tramo_RV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeTramo\Tramo_RV.Designer.cs">
+      <DependentUpon>Tramo_RV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Formas del Menu\tramo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formas del Menu\tramo.Designer.cs">
+      <DependentUpon>tramo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformeCategoria\categoria_RV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformeCategoria\categoria_RV.Designer.cs">
+      <DependentUpon>categoria_RV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="InformeCarretera\Carretera_Informe.rdlc" />
+    <EmbeddedResource Include="InformeCarretera\carretera_RV.resx">
+      <DependentUpon>carretera_RV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeCategoria\Categoria_Informe.rdlc" />
+    <EmbeddedResource Include="Formas del Menu\carretera.resx">
+      <DependentUpon>carretera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas del Menu\categoria.resx">
+      <DependentUpon>categoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas del Menu\comuna.resx">
+      <DependentUpon>comuna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas del Menu\tramo.resx">
+      <DependentUpon>tramo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas Principales\Presentacion.resx">
+      <DependentUpon>Presentacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas Principales\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas Principales\mensaje.resx">
+      <DependentUpon>mensaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formas Principales\notificacion.resx">
+      <DependentUpon>notificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeComuna\Comuna_Informe.rdlc" />
+    <EmbeddedResource Include="InformeComuna\Comuna_RV.resx">
+      <DependentUpon>Comuna_RV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformeTramo\Tramo_Informe.rdlc" />
+    <EmbeddedResource Include="InformeTramo\Tramo_RV.resx">
+      <DependentUpon>Tramo_RV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="InformeCategoria\categoria_RV.resx">
+      <DependentUpon>categoria_RV.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="InformeCarretera\Carretera.xsc">
+      <DependentUpon>Carretera.xsd</DependentUpon>
+    </None>
+    <None Include="InformeCarretera\Carretera.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Carretera.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="InformeCarretera\Carretera.xss">
+      <DependentUpon>Carretera.xsd</DependentUpon>
+    </None>
+    <None Include="InformeCategoria\Categoria.xsc">
+      <DependentUpon>Categoria.xsd</DependentUpon>
+    </None>
+    <None Include="InformeCategoria\Categoria.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Categoria.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="InformeCategoria\Categoria.xss">
+      <DependentUpon>Categoria.xsd</DependentUpon>
+    </None>
+    <None Include="InformeComuna\Comuna.xsc">
+      <DependentUpon>Comuna.xsd</DependentUpon>
+    </None>
+    <None Include="InformeComuna\Comuna.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Comuna.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="InformeComuna\Comuna.xss">
+      <DependentUpon>Comuna.xsd</DependentUpon>
+    </None>
+    <None Include="InformeTramo\Tramo.xsc">
+      <DependentUpon>Tramo.xsd</DependentUpon>
+    </None>
+    <None Include="InformeTramo\Tramo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Tramo.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="InformeTramo\Tramo.xss">
+      <DependentUpon>Tramo.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sin título-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-president-of-mexico-federal-government-of-mexico-l-clientes-artphoto-5b90706cccd3d4.946542661536192620839.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mexico-gobierno-de-la-republica-logo-png-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\la-carretera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\intro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\94468554_2279121785715686_2480796895698485248_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\94980978_232306374499809_6211491396939939840_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sin título-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comprobar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pluma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\otrofondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\conexiones.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
